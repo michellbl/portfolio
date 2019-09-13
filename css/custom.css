@@ -1,4 +1,16 @@
-body{
+body {
     padding-top: 65px;
+    padding: 0 auto;
 }
 
+#contLink {
+    text-decoration: none;
+    color: #292b2c;
+    font-weight: bold;
+}
+
+#contLink:hover {
+    color: #fff;
+    background-color: #292b2c;
+    font-weight: bold;
+}
