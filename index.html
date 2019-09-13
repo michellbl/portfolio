@@ -5,7 +5,7 @@
     <!-- Required meta tags -->
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
-    <meta name="description" content="" />
+    <meta name="description" content="Desenvolvimento de sites com um freelancer. Entre em contato agora mesmo." />
     <meta name="author" content="" />
 
     <title>Michell Bezerra de Lima</title>
@@ -18,6 +18,7 @@
     <link rel="stylesheet" href="css/custom.css" />
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous" />
+
 </head>
 
 <body>
@@ -41,39 +42,43 @@
             </ul>
         </div>
     </nav>
-    <div class="container-fluid text-center shadow p-5 mb-5 bg-white rounded" id="sobre">
+    <!--Sobre-->
+    <div class="container-fluid text-center shadow mb-5 bg-white rounded" id="sobre">
         <div class="row">
             <div class="col">
-                <img id="bordasCustom" class="figure-img rounded-circle" src="https://picsum.photos/300/300?grayscale" />
+                <img class="figure-img rounded-circle" src="https://picsum.photos/300/300?grayscale" />
             </div>
             <div class="col p-3">
                 <h1 class="display-4"><span class="bg-dark text-white">M</span>ichell Bezerra de Lima
                 </h1>
                 <hr class="my-3">
-                <p class="text-justify pr-3"><span class="bg-dark text-white">M</span>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Facere porro dolorem eius voluptas asperiores! Explicabo perferendis architecto quam expedita laborum. Aliquam, molestias esse reprehenderit
-                    suscipit assumenda fugit sint exercitationem veniam.</p>
+                <p class="text-justify pr-3 lead"><span id="comprimentos"></span>meu nome é Michell e sou estudante em desenvolvimento Front End e UX Design, atualmente estou trabalhando com desenvolvimento de sites por freelancer, caso esteja interessado estarei à sua disposição para
+                    um eventual projeto de site clique nesse <a href="#contato" class="bg-dark text-white h4 text-decoration-none">link</a> para ver minhas opções de contato. <br/>Ah e não esqueça de conferir alguns dos meus modelos e projetos, pois estarei
+                    atualizando essa página com novos designes e tecnologias.
+                </p>
             </div>
         </div>
     </div>
-    <div class="container" id="modelos">
-        <h1 class="display-4 pt-5 pb-5"> Alguns modelos criados</h1>
+    <!--Modelos-->
+    <div class="container text-center" id="modelos">
+        <h1 class="display-4 pt-5 pb-5">Meus modelos e projetos</h1>
         <div class="row ">
             <div class="col-sm ">
                 <figure class="figure">
                     <img src="https://picsum.photos/400/400/?grayscale" class="figure-img img-fluid rounded" alt="Imagem de um quadrado genérico com bordas arredondadas, em uma figure.">
-                    <figcaption class="figure-caption">Um modelo criado.</figcaption>
+                    <figcaption class="figure-caption font-weight-bold">Perfil - Dark & White.</figcaption>
                 </figure>
             </div>
             <div class="col-sm ">
                 <figure class="figure">
                     <img src="https://picsum.photos/400/400/?grayscale" class="figure-img img-fluid rounded" alt="Imagem de um quadrado genérico com bordas arredondadas, em uma figure.">
-                    <figcaption class="figure-caption">Um modelo criado.</figcaption>
+                    <figcaption class="figure-caption font-weight-bold">Perfil - Black & White.</figcaption>
                 </figure>
             </div>
             <div class="col-sm ">
                 <figure class="figure">
                     <img src="https://picsum.photos/400/400/?grayscale" class="figure-img img-fluid rounded" alt="Imagem de um quadrado genérico com bordas arredondadas, em uma figure.">
-                    <figcaption class="figure-caption">Um modelo criado.</figcaption>
+                    <figcaption class="figure-caption font-weight-bold">Perfil - Black & White.</figcaption>
                 </figure>
             </div>
         </div>
@@ -91,14 +96,28 @@
     <div class="container-fluid text-dark text-center mt-4">
         <p>
             <a href=""><i class="fab fa-instagram text-decoration-none text-dark fa-4x pr-2"></i></a>
-            <a href=""><i class="fab fa-facebook-square text-decoration-none text-dark fa-4x pr-2"></i></a>
-            <a href=""><i class="fab fa-behance text-decoration-none text-dark fa-4x"></i></a>
+            <a href=""><i class="fab fa-linkedin text-decoration-none text-dark fa-4x pr-2"></i></a>
+            <a href="https://www.behance.net/michellbli2162"><i class="fab fa-behance text-decoration-none text-dark fa-4x pr-2"></i></a>
+            <a href=""><i class="fab fa-github text-decoration-none text-dark fa-4x"></i></a>
         </p>
     </div>
 
 </body>
 
 <!-- Optional JavaScript -->
+<script>
+    var now = new Date(),
+        hour = now.getHours();
+
+    var shift = "Olá, ";
+    shift += (hour >= 4 && hour <= 11) ? "bom dia, " : "",
+        shift += (hour >= 12 && hour <= 18) ? "boa tarde, " : "",
+        shift += (hour >= 19 || hour <= 3) ? "boa noite, " : "";
+
+    console.log(shift)
+
+    document.getElementById('comprimentos').innerHTML = shift;
+</script>
 <!-- jQuery first, then Popper.js, then Bootstrap JS -->
 <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js " integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo " crossorigin="anonymous "></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js " integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1 " crossorigin="anonymous "></script>
